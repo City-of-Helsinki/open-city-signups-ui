@@ -1,26 +1,29 @@
 import React, {Component} from 'react'
-import logo from '../../assets/logo.svg'
+import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
+
 import './App.css'
 
-import { Button } from 'reactstrap';
+import LandingPage from '../Landingpage/Landing';
+import NotFound from '../Notfound/Notfound';
+
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Button color='danger' size='lg'>Hello Text</Button>
-      </div>
-    )
+      <BrowserRouter>
+        <Switch>
+          <Route path='/signup' render={()=><LandingPage title='Home Page'/>}/>
+          <Route path='/about' render={()=><LandingPage title='About Page'/>}/>
+          <Route path='/help' render={()=><LandingPage title='Help Page'/>}/>
+          <Route path='/services' render={()=><LandingPage title='Services Page'/>}/>
+          <Redirect from='/' to = '/signup' exact={true} />
+          <Route path='/404' render={()=><NotFound/>}/>
+          <Redirect from='*' to = '/404' exact={true} />
+        </Switch>
+      </BrowserRouter>
+    );
   }
 }
-
-
 
 export default App;
