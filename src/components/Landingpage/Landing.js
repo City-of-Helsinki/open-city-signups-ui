@@ -1,5 +1,8 @@
 import React from 'react';
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.svg';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faUser from '@fortawesome/fontawesome-free-solid/faUser';
+
 import './landing.css';
 
 const LandingPage = props =>{
@@ -12,6 +15,13 @@ const LandingPage = props =>{
       <p className='App-intro'>
         {props.title}
       </p>
+      <FontAwesomeIcon 
+        className='super-crazy-colors'
+        name='rocket'
+        icon={faUser}
+        size='4x'
+        spin
+        style={{textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)'}}/>
     </div>
   );
 };
