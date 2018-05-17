@@ -151,6 +151,19 @@ module.exports = {
               cacheDirectory: true,
             },
           },
+
+          {
+            test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+            use: [{
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
+                outputPath: 'fonts/',    // where the fonts will go
+                publicPath: '../',       // override the default path
+              },
+            }],
+          },
+
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
           // "style" loader turns CSS into JS modules that inject <style> tags.
@@ -259,4 +272,7 @@ module.exports = {
   performance: {
     hints: false,
   },
+
+
+
 };
