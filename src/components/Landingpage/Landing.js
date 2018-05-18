@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from '../../assets/logo.svg';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faUser from '@fortawesome/fontawesome-free-solid/faUser';
 
-import './landing.css';
+import styles from './landing.scss';
+import logo from '../../assets/logo.svg';
 
 const LandingPage = props =>{
   return(
@@ -22,6 +22,10 @@ const LandingPage = props =>{
         size='4x'
         spin
         style={{textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)'}}/>
+
+      <section className={styles.koroBg}>
+        <p className={styles.koroContent}>Foobar</p>
+      </section>
     </div>
   );
 };
