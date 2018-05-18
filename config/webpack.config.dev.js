@@ -188,6 +188,34 @@ module.exports = {
               },
             ],
           },
+          {
+            test: /\.scss$/,
+            exclude: /\.global.scss$/,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  modules: true,
+                  sourceMap: true,
+                  importLoaders: 2,
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
+                },
+              },
+              require.resolve('sass-loader'),
+            ],
+          },
+          // Global scss for external library, not going through css-loader to change to local classname
+          {
+            test: /\.global.scss$/,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+              },
+              require.resolve('sass-loader'),
+            ],
+          },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.

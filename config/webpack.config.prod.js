@@ -43,7 +43,7 @@ const cssFilename = 'static/css/[name].[contenthash:8].css';
 // To have this structure working with relative paths, we have to use custom options.
 const extractTextPluginOptions = shouldUseRelativeAssetPaths
   ? // Making sure that the publicPath goes back to to build folder.
-    { publicPath: Array(cssFilename.split('/').length).join('../') }
+  {publicPath: Array(cssFilename.split('/').length).join('../')}
   : {};
 
 // This is the production configuration.
@@ -211,6 +211,34 @@ module.exports = {
               )
             ),
             // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
+          },
+          {
+            test: /\.scss$/,
+            exclude: /\.global.scss$/,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  modules: true,
+                  sourceMap: true,
+                  importLoaders: 2,
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
+                },
+              },
+              require.resolve('sass-loader'),
+            ],
+          },
+          // Global scss for external library, not going through css-loader to change to local classname
+          {
+            test: /\.global.scss$/,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+              },
+              require.resolve('sass-loader'),
+            ],
           },
           // "file" loader makes sure assets end up in the `build` folder.
           // When you `import` an asset, you get its filename.
