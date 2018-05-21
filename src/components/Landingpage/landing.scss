@@ -5,11 +5,13 @@
   color: white;
   background: $hel-metro;
   padding: 20px 15px;
+  width:100%;
 }
  
 .koroBg:before {
-  height: 100px;
+  width:100%;
+  height: 200px;
   content: '';
   display: block;
-  @include koro('beat', $hel-metro, 500);
+  @include koro('pulse', $hel-metro, 465);
 }
