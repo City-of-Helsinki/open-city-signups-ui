@@ -8,32 +8,53 @@ import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
 import styles from './footer.scss';
 
 
+
 const Footer = props =>{
   return(
     <div className={styles.koroFooter}>
       <div className={styles.logoHel}><p className={styles.logoText}>Logo</p></div>
       <div className={styles.socialIconsContainer}>
-        <FontAwesomeIcon 
-          name = 'facebook'
-          size ='2x'
-          icon = {faFacebook}
-          className={styles.icons}
-        />
-        <FontAwesomeIcon 
-          name = 'instagram'
-          size ='2x'
-          icon = {faInstagram}
-          className={styles.icons}/>
-        <FontAwesomeIcon 
-          name = 'youtube'
-          size ='2x'
-          icon = {faYoutube}
-          className={styles.icons}/>
-        <FontAwesomeIcon 
-          name = 'twitter'
-          size ='2x'
-          icon = {faTwitter}
-          className={styles.icons}/>
+        <a 
+          href='https://www.facebook.com/myhelsinki '
+          target='_blank' 
+          rel='noopener noreferrer'>
+          <FontAwesomeIcon 
+            name = 'facebook'
+            size ='2x'
+            icon = {faFacebook}
+            className={styles.icons}
+          />
+        </a>
+        <a 
+          href='https://www.instagram.com/myhelsinki'
+          target='_blank'
+          rel='noopener noreferrer'>
+          <FontAwesomeIcon 
+            name = 'instagram'
+            size ='2x'
+            icon = {faInstagram}
+            className={styles.icons}/>
+        </a>
+        <a 
+          href='https://www.youtube.com/user/Visithelsinki' 
+          target='_blank'
+          rel='noopener noreferrer'>
+          <FontAwesomeIcon 
+            name = 'youtube'
+            size ='2x'
+            icon = {faYoutube}
+            className={styles.icons}/>
+        </a>
+        <a 
+          href='https://twitter.com/myhelsinki' 
+          target='_blank' 
+          rel='noopener noreferrer'>
+          <FontAwesomeIcon 
+            name = 'twitter'
+            size ='2x'
+            icon = {faTwitter}
+            className={styles.icons}/>
+        </a>
       </div>
     </div>
   );

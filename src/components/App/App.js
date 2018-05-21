@@ -5,7 +5,7 @@ import './App.css'
 
 import LandingPage from '../Landingpage/Landing';
 import NotFound from '../Notfound/Notfound';
-import Footer from '../footer/Footer';
+
 
 
 class App extends Component {
@@ -16,15 +16,11 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path='/signup' render={()=><LandingPage title='Home Page'/>}/>
-            <Route path='/about' render={()=><LandingPage title='About Page'/>}/>
-            <Route path='/help' render={()=><LandingPage title='Help Page'/>}/>
-            <Route path='/services' render={()=><LandingPage title='Services Page'/>}/>
             <Redirect from='/' to = '/signup' exact={true} />
             <Route path='/404' render={()=><NotFound/>}/>
             <Redirect from='*' to = '/404' exact={true} />
           </Switch>
         </BrowserRouter>
-        <Footer/>
       </div>
     );
   }

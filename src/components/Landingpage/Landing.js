@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Footer from '../footer/Footer';
 
 //import styles from './landing.scss';
 
@@ -10,12 +10,7 @@ const LandingPage = props =>{
       <p className='App-intro'>
         {props.title}
       </p>
-      {/*<section className={styles.koroBg}>
-        <div className={styles.logoHel}>Logo</div>
-        <div className={styles.koroContent}>
-          Foobar
-        </div>
-      </section>*/}
+      <Footer/>
     </div>
   );
 };
