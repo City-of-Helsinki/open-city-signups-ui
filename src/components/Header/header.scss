@@ -48,3 +48,8 @@
 .langDiv{
     width: auto;
 }
+
+.langDiv:hover{
+    color: $hel-white;
+    background-color: $hel-dark;
+}
