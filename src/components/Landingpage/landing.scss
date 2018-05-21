@@ -7,7 +7,7 @@
   padding: 20px 15px;
 }
  
-.koroBg:before {
+.koroBg::after {
   height: 100px;
   content: '';
   display: block;
