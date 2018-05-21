@@ -2,14 +2,19 @@
 @import '../../scss/helsinki/variables';
  
 .koroBg .koroContent {
-  color: white;
-  background: $hel-metro;
+  color:$hel-black;
+  background: $hel-coat;
   padding: 20px 15px;
 }
  
 .koroBg:before {
-  height: 100px;
+  height: 50px;
   content: '';
   display: block;
-  @include koro('beat', $hel-metro, 500);
+  @include koro('pulse', $hel-coat, 465);
+}
+
+.logoHel{
+  line-height: 50px;
+  @include helsinki-logo($hel-black)
 }

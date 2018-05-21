@@ -1,0 +1,36 @@
+@import '../../scss/helsinki/custom-styles';
+@import '../../scss/helsinki/variables';
+
+.koroFooter{
+      width: 100%;
+      height: $line-height-computed *11;
+      @include koro(pulse, $hel-coat, $_scale*460) 
+}
+
+.logoHel{
+      width: 12%;
+      margin: auto;
+      line-height: 14vh;
+      position: relative;
+      top: 30%;
+      background-size: cover;
+      @include helsinki-logo($hel-white)
+}
+
+.logoText{
+      visibility: hidden;
+}
+
+.socialIconsContainer{
+      width: 100%;
+      height: 20vh;
+      background-color: $hel-coat;
+      display: flex;
+      align-items: center;
+}
+
+.icons{
+      margin: 0 40px 0 20px;
+      color: $hel-light;
+      cursor: pointer;
+}
