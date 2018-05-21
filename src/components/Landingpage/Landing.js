@@ -1,6 +1,7 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faUser from '@fortawesome/fontawesome-free-solid/faUser';
+import {FormattedMessage} from 'react-intl';
 
 import styles from './landing.scss';
 import logo from '../../assets/logo.svg';
@@ -10,7 +11,7 @@ const LandingPage = props =>{
     <div className='App'>
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
-        <h1 className='App-title'>Welcome to React</h1>
+        <h1 className='App-title'><FormattedMessage id="app.welcome" defaultMessage="Welcome to React" /></h1>
       </header>
       <p className='App-intro'>
         {props.title}
