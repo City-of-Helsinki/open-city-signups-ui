@@ -7,9 +7,9 @@
   padding: 20px 15px;
 }
  
-.koroBg::after {
-  height: 100px;
+.koroBg::before {
+  height: 65px;
   content: '';
   display: block;
-  @include koro('beat', $hel-metro, 500);
+  @include koro('beat', $hel-white, 500);
 }

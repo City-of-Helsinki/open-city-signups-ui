@@ -9,7 +9,7 @@ const Bodytext = 'Kokeile ja käytä helsingin uusia digitaalisia palveluita yks
 
 const LandingPage = props =>{
   return(
-    <div className={styles.App}>
+    <div className={styles.koroBg}>
       <Section 
         heading={Heading}
         bodytext={Bodytext}
