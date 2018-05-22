@@ -2,30 +2,19 @@
 @import '../../scss/helsinki/custom-styles';
 
 .headerContainer{
-    width: 100%;
+    width: 80%;
     margin: auto;
-    padding: 10px;
+    padding: 10px 0 0 0;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "col1 col2";
 }
 
-.logo{
-    height: $line-height-computed * 3;
-    grid-area: col1;
-    justify-self: flex-start;
-      @include helsinki-logo($hel-black)
-}
-
 .logoTitle{
-    position: relative;
-    right: -7vw;
     font-size: 18px;
     font-weight: 600;
-    line-height: 43px;
-    @media screen and (max-width:1280px){
-        right: -10vw;
-    }
+    display: inline-block;
+    margin: 0 0 0 10px;
 }
 
 .loginSide{
@@ -36,7 +25,11 @@
 }
 
 .userIcon{
-    margin: 0 10px 0 10px;
+    margin: 0 10px 0 0;
+}
+
+.caret{
+    margin: 0 0 0 5px;
 }
 
 .iconContainer{

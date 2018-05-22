@@ -1,17 +1,4 @@
 @import '../../scss/helsinki/custom-styles';
 @import '../../scss/helsinki/variables';
  
-.koroBg .koroContent {
-  color: white;
-  background: $hel-metro;
-  padding: 20px 15px;
-  width:100%;
-}
- 
-.koroBg:before {
-  width:100%;
-  height: 200px;
-  content: '';
-  display: block;
-  @include koro('pulse', $hel-metro, 465);
-}
+
