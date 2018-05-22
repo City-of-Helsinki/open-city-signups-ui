@@ -1,0 +1,43 @@
+@import '../../scss/helsinki/custom-styles';
+@import '../../scss/helsinki/variables';
+
+.koroBgOma{
+    background-color: $hel-oma;
+    padding: 20px 15px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 70vh;
+  }
+   
+  .koroBgWhite{
+    background-color: $hel-white;
+    padding: 20px 15px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 70vh;
+  }
+
+  .containerText{
+    padding: 0 0 0 35%;
+    align-self: center;
+    justify-self: flex-end;
+  }
+  
+  .containerIphone{
+    justify-self: flex-start;
+    padding: 0 0 0 15%;
+  }
+
+  .iphone{
+    position: absolute;
+    top:20%;
+  }
+
+  .arrow{
+    margin: 0 0 0 10px;
+  }
+
+  .containerButton{
+    width: fit-content;
+    justify-self: flex-end;
+  }
