@@ -2,7 +2,7 @@ import React from 'react';
 
 import Section from '../SectionGeneric/Section';
 
-import styles from './landing.scss';
+
 
 import iphone6 from '../../assets/iPhone6.png';
 const Heading = 'Yhdellä tunnuksella monta mahdollisuutta';
@@ -10,7 +10,7 @@ const Bodytext = 'Helsingin kaupunki kokeilee ja kehittää koko ajan uusia verk
 
 const LandingPage = props =>{
   return(
-    <div className={styles.App}>
+    <div>
       <Section 
         bgcolor='Oma'
         image={true}
