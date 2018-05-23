@@ -6,7 +6,10 @@
     color: $hel-bus;
     font-size: 45px;
     font-weight: 700;
-    line-height: 50px
+    line-height: 50px;
+    @media screen and (max-width:1280px){
+        font-size: 43px;
+      }
 }
 
 .bodyText{
