@@ -27,7 +27,7 @@ class Header extends React.Component{
     return (
       //The leftside starts here, Helsink Logo and the title
       <div className={styles.headerContainer}>
-        <div>
+        <div className={styles.logoContainer}>
           <img src={this.props.logo ? this.props.logo : HelLogo} alt='Helsinki Logo'/> 
           <p className={styles.logoTitle}>
             {this.props.logoTitle ? this.props.logoTitle : 'Oma.Helsinki'}
