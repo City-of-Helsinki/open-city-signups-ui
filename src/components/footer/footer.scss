@@ -3,18 +3,21 @@
 
 .koroFooter{
       width: 100%;
-      height: $line-height-computed *11;
-      @include koro(pulse, $hel-coat, $_scale*460) 
+      height: 11rem;
+      @include koro(pulse, $hel-coat, 460) 
 }
 
-.logoHel{
+.logoContainer{
       width: 12%;
       margin: auto;
       line-height: 14vh;
-      position: relative;
-      top: 30%;
-      background-size: cover;
-      @include helsinki-logo($hel-white)
+      @media screen and (max-width:414px){
+            width: 30%;
+      }
+}
+
+.logo{
+      margin: 50px 0 0 0;
 }
 
 .logoText{

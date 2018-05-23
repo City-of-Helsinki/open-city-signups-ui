@@ -1,5 +1,6 @@
 import React from 'react';
 
+import HelLogo from '../../assets/helsinki-logo.svg';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebookF';
 import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
@@ -12,7 +13,9 @@ import styles from './footer.scss';
 const Footer = props =>{
   return(
     <div className={styles.koroFooter}>
-      <div className={styles.logoHel}><p className={styles.logoText}>Logo</p></div>
+      <div className={styles.logoContainer}>
+        <img src={HelLogo} alt='Helsinki-logo' className={styles.logo}/>
+      </div>
       <div className={styles.socialIconsContainer}>
         <a 
           href='https://www.facebook.com/myhelsinki '
