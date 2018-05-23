@@ -45,6 +45,7 @@
   .iphone{
     position: absolute;
     top:20%;
+    height: 70vh;
     @media screen and (max-width:414px){
       visibility: hidden;
     }
