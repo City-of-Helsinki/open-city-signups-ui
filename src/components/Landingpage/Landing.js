@@ -16,7 +16,8 @@ const LandingPage = props =>{
         image={true}
         img={iphone6}
         heading={Heading}
-        bodytext={Bodytext}/>
+        bodytext={Bodytext}
+      />
     </div>
   );
 };
