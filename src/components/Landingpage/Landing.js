@@ -5,10 +5,17 @@ import {FormattedMessage} from 'react-intl';
 
 import styles from './landing.scss';
 import logo from '../../assets/logo.svg';
+import userManager from '../../oidc/userManager';
 
-const LandingPage = props =>{
+const LandingPage = props => {
+  const handleSignupClick = (event) => {
+    event.preventDefault();
+    userManager.signinRedirect();
+  };
+
   return(
     <div className='App'>
+      <button onClick={handleSignupClick}>Click</button>
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
         <h1 className='App-title'><FormattedMessage id="app.welcome" defaultMessage="Welcome to React" /></h1>
