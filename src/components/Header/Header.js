@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 
 import styles from './header.scss';
 
-import HelLogo from '../../assets/helsinki-logo.svg'
+import HelLogo from '../../assets/helsinki-logo-header.svg';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faGlobe from '@fortawesome/fontawesome-free-solid/faGlobe';
 import faCaret from '@fortawesome/fontawesome-free-solid/faCaretDown';
