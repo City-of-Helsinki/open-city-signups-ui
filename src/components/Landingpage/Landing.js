@@ -3,7 +3,7 @@ import React from 'react';
 import userManager from '../../oidc/userManager'; 
 import Section from '../SectionGeneric/Section';
 import styles from './landing.scss';
-import iphone6 from '../../assets/iPhone6.png';
+import iphone from '../../assets/iphone.svg';
 
 const buttonClickHandler = () => {
   userManager.signinRedirect();
@@ -15,7 +15,7 @@ const LandingPage = props => {
       <Section
         bgcolor='Oma'
         image={true}
-        img={iphone6}
+        img={iphone}
         heading='Yhdellä tunnuksella monta mahdollisuutta'
         bodytext='Helsingin kaupunki kokeilee ja kehittää koko ajan uusia verkkopalveluita asukkaidensa arjen helpottanmiseksi. Rekisteröitymällä oma.helsinki käyttäjäksi pääset käyttämään uusia palveluita yhdellä helpolla kirjautumisella.'
       />
