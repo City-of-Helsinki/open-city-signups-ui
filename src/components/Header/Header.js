@@ -4,21 +4,8 @@ import propTypes from 'prop-types';
 import styles from './header.scss';
 import HelLogo from '../../assets/helsinki-logo.svg';
 
-class Header extends React.Component{
-  constructor(props){
-    super(props)
-    this.state = {
-      dropdownOpen: false,
-    };
-  }
-
-  toggle = () => {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen,
-    });
-  }
-
-  render(){
+class Header extends React.Component {
+  render() {
     return (
       //The leftside starts here, Helsink Logo and the title
       <div className={styles.headerContainer}>
