@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HelLogo from '../../assets/helsinki-logo.svg';
+import HelLogo from '../../assets/helsinki-logo.1.svg';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebookF';
 import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
