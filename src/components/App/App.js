@@ -5,6 +5,9 @@ import Header from '../Header/Header';
 const langArray = ['English', 'Suomi', 'Svenska', 'Deutsch', '日本語', 'Русский'];
 
 
+import Footer from '../footer/Footer';
+
+
 class App extends Component {
 
   render() {
@@ -12,7 +15,7 @@ class App extends Component {
       <main>
         <Header languages={langArray}/>
         {this.props.children}
-        {/*Footer*/}
+        <Footer/>
       </main>
     );
   }

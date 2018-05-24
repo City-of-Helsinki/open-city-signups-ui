@@ -6,6 +6,7 @@
       "plugin:import/warnings"
     ],
     "rules": {
+      "no-console":"warn",
       "comma-dangle": [2, "always-multiline"],
       "eol-last": [2, "always"],
       "indent": [2, 2, {"SwitchCase":1}],
