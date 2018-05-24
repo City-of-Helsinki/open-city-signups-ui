@@ -1,9 +1,13 @@
 import React from 'react';
 
+import userManager from '../../oidc/userManager'; 
 import Section from '../SectionGeneric/Section';
-
 import styles from './landing.scss';
 import iphone6 from '../../assets/iPhone6.png';
+
+const buttonClickHandler = () => {
+  userManager.signinRedirect();
+};
 
 const LandingPage = props => {
   return(
@@ -21,7 +25,8 @@ const LandingPage = props => {
         button={true}
         buttonlabel='Signup For Beta testing'
         buttonsize='btn btn-sm'
-        buttoncolor='info'/>
+        buttoncolor='info'
+        onButtonClick={buttonClickHandler}/>
     </div>
   );
 };
