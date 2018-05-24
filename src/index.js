@@ -9,7 +9,7 @@ import './index.global.scss';
 import App from './components/App/App';
 import LandingPage from './components/Landingpage/Landing';
 import NotFound from './components/Notfound/Notfound';
-import CallbackPage from './components/CallbackComponent';
+import CallbackPage from './components/CallbackPage/CallbackPage';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './redux/store';
 import ConnectedIntlProvider from './intl/ConnectedIntlProvider';
