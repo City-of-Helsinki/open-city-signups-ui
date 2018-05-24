@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
 
 import Header from '../Header/Header';
-
-const langArray = ['English', 'Suomi', 'Svenska', 'Deutsch', '日本語', 'Русский'];
-
-
 import Footer from '../footer/Footer';
 
+const langArray = ['English', 'Suomi', 'Svenska', 'Deutsch', '日本語', 'Русский'];
 
 class App extends Component {
 
