@@ -1,1 +1,20 @@
+@import '../../scss/helsinki/custom-styles';
+@import '../../scss/helsinki/variables';
+ 
+.koroBg .koroContent {
+  color: white;
+  background: $hel-metro;
+  padding: 20px 15px;
+}
+
+.koroBg{
+  margin: -66px 0 0 0;
+}
+ 
+.koroBg::before {
+  height: 65px;
+  content: '';
+  display: block;
+  @include koro('beat', $hel-white, 500);
+}
 
