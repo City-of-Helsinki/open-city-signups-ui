@@ -1,0 +1,51 @@
+@import '../../scss/helsinki/variables';
+@import '../../scss/helsinki/custom-styles';
+
+.headerContainer{
+    width: 80%;
+    margin: auto;
+    padding: 10px 0 10px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "col1 col2";
+}
+
+.logoTitle{
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    @media screen and (max-width:414px){
+        margin: 0 ;
+    }
+}
+
+.loginSide{
+    grid-area: col2;
+    justify-self: flex-end;
+    align-self: center;
+    display: inline-flex;
+}
+
+.userIcon{
+    margin: 0 10px 0 0;
+}
+
+.caret{
+    margin: 0 0 0 5px;
+}
+
+.iconContainer{
+    display: inline-flex;
+    cursor: pointer;
+    align-items: baseline;
+}
+
+.langDiv{
+    width: auto;
+}
+
+.langDiv:hover{
+    color: $hel-white;
+    background-color: $hel-dark;
+}
