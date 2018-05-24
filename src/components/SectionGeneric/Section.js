@@ -13,7 +13,7 @@ import styles from './section.scss';
 const SectionButton = props => {
   return (
     <div className={styles.containerButton}>
-      <Button color={props.buttoncolor} className={props.buttonsize}>
+      <Button color={props.buttoncolor} className={props.buttonsize} onClick={props.onClick}>
         {props.buttonlabel}
         <FontAwesomeIcon 
           icon={faArrowRight}
@@ -33,12 +33,13 @@ const SectionImage = props => {
   );
 }
 
-const Section = props =>{
+const Section = props => {
   return(
     <div className={props.bgcolor === 'Oma' ? styles.koroBgOma : styles.koroBgWhite}>
       <div className={styles.containerText}>
         <Texts heading = {props.heading} bodytext={props.bodytext}/>
-        {props.button ? <SectionButton 
+        {props.button ? <SectionButton
+          onClick={props.onButtonClick}
           buttonlabel={props.buttonlabel} 
           buttonsize={props.buttonsize}
           buttoncolor={props.buttoncolor}/> : ''}
@@ -56,6 +57,7 @@ Section.propTypes = {
   buttonlabel: PropTypes.string,
   buttonsize: PropTypes.string,
   buttoncolor: PropTypes.string,
+  buttonClick: PropTypes.func,
   image: PropTypes.bool,
   img: PropTypes.node,
 };
