@@ -1,20 +1,6 @@
-/*!
- * Open City Design UI Styles Alpha
- * Customised Bootstrap 4 theme
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
-// Import city specific variable overrides.
 @import "scss/helsinki/variables";
 
-// Import Bootstrap styles, with 6Aika default variable settings.
 
-/*!
- * Bootstrap v4.0.0 (https://getbootstrap.com)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 
 @import "~bootstrap/scss/functions";
 @import "scss/6aika/variables";
@@ -51,6 +37,5 @@
 @import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/utilities";
 
-// Import city specific style overrides.
 
 @import "scss/helsinki/custom-styles";

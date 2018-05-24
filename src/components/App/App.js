@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 
+import Footer from '../footer/Footer';
+
+
 class App extends Component {
 
   render() {
@@ -7,7 +10,7 @@ class App extends Component {
       <main>
         {/*Header*/}
         {this.props.children}
-        {/*Footer*/}
+        <Footer/>
       </main>
     );
   }
