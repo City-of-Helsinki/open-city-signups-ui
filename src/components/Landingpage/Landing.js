@@ -24,7 +24,7 @@ const LandingPage = props => {
           heading='Etsimme testaajia'
           bodytext='Kokeile ja käytä helsingin uusia digitaalisia palveluita yksillä tunnuksilla. Ilmoittaudu mukaan Beta testaukseen.'
           button={true}
-          buttonlabel='Signup For Beta testing'
+          buttonlabel='Rekisteröidy Beta-testaukseen'
           buttonsize='btn btn-sm'
           buttoncolor='info'
           onButtonClick={buttonClickHandler}/>
