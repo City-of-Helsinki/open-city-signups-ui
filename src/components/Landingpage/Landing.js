@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {UncontrolledAlert} from 'reactstrap';
 
 import userManager from '../../oidc/userManager'; 
 import Section from '../SectionGeneric/Section';
@@ -9,9 +11,28 @@ const buttonClickHandler = () => {
   userManager.signinRedirect();
 };
 
+const Info = props => {
+  return (
+    <UncontrolledAlert color='info'>
+      {props.text}
+    </UncontrolledAlert>
+  );
+};
+
+const Error = props => {
+  return (
+    <UncontrolledAlert color='danger'>
+      {props.text}
+    </UncontrolledAlert>
+  );
+};
+
 const LandingPage = props => {
-  return(
-    <div >
+  return (
+    <div className={styles.koroBg}>
+      {props.isSuccess && <Info text='Sign up registered! Follow your email.' />}
+      {props.signupExists && <Info text='You have already signed up.' />}
+      {props.isError && <Error text='Something went wrong.' />}
       <Section
         bgcolor='Oma'
         image={true}
@@ -33,4 +54,11 @@ const LandingPage = props => {
   );
 };
 
-export default LandingPage;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    isError: state.api.isError,
+    isSuccess: state.api.isSuccess,
+    signupExists: state.api.signupExists,
+  };
+};
+export default connect(mapStateToProps)(LandingPage);
