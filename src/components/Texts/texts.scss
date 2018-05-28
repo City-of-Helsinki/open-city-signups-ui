@@ -2,21 +2,13 @@
 @import '../../scss/helsinki/variables';
 
 
-.Heading{
-    color: $hel-bus;
-    font-size: 45px;
-    font-weight: 700;
-    line-height: 50px;
-    @media screen and (max-width:1280px){
-        font-size: 43px;
-      }
+.heading {
+  color: $hel-bus;
+  font-size: 45px;
+  line-height: 50px;
+  margin-bottom: 20px;
 }
 
-.bodyText{
-    font-size: 10px; 
-    line-height: 15px;
-}
-
-.containerText{
-    text-align: left;
+.body {
+  
 }

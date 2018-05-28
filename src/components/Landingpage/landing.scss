@@ -1,20 +1,47 @@
 @import '../../scss/helsinki/custom-styles';
 @import '../../scss/helsinki/variables';
- 
-.koroBg .koroContent {
-  color: white;
-  background: $hel-metro;
-  padding: 20px 15px;
+
+.alertSection {
+  background-color: $hel-oma;
+  padding-top: 3rem;
 }
 
-.koroBg{
-  margin: -66px 0 0 0;
-}
- 
-.koroBg::before {
-  height: 65px;
-  content: '';
-  display: block;
-  @include koro('beat', $hel-white, 500);
+.upperSection {
+  background-color: $hel-oma; 
+  min-height: 500px;
+  padding-top: 3rem;
 }
 
+.lowerSection {
+  background: #fff;
+  min-height: 500px;
+  &::before {
+    content: '';
+    display: block;
+    height: 50px;
+    padding-top: 10rem;
+    background-color: $hel-oma;
+    @include koro(beat, #fff, 300);
+  }
+}
+
+.phoneWrapper {
+  transform: translateY(-100%);
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.phone {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.arrow {
+  margin-left: 10px;
+}
+
+.signupButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}

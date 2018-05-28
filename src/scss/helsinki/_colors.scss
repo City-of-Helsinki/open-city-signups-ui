@@ -18,7 +18,9 @@ $hel-tram:          #009246;
 $hel-summer:        #ffc61e;
 $hel-silver:        #dedfe1;
 $hel-gold:          #c2a251;
-$hel-oma: #7DE9CC;
+
+// Project specific
+$hel-oma:           #7DE9CC;
 
 // Brand monochromes
 // Not brand loyal $hel-black (#000000) –optimized for digital use.
@@ -46,7 +48,6 @@ $theme-colors: (
   danger: $red,
   light: $hel-light,
   dark: $hel-dark,
-  white: $hel-white
-  
+  white: $hel-white,
+  oma: $hel-oma,
 );
-
