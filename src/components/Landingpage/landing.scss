@@ -1,11 +1,15 @@
 @import '../../scss/helsinki/custom-styles';
 @import '../../scss/helsinki/variables';
 
+.alertSection {
+  background-color: $hel-oma;
+  padding-top: 3rem;
+}
 
 .upperSection {
   background-color: $hel-oma; 
   min-height: 500px;
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 
 .lowerSection {

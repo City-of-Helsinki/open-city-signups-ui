@@ -32,6 +32,17 @@ const Error = props => {
 const LandingPage = props => {
   return(
     <div>
+      <section className={styles.alertSection}>
+        <Container>
+          <Row>
+            <Col>
+              {props.isSuccess && <Info text='Sign up registered! Follow your email.' />}
+              {props.signupExists && <Info text='You have already signed up.' />}
+              {props.isError && <Error text='Something went wrong.' />}
+            </Col>
+          </Row>
+        </Container>
+      </section>
       <section className={styles.upperSection}>
         <Container>
           <Row>
@@ -68,9 +79,6 @@ const LandingPage = props => {
           </Row>
         </Container>
       </section>
-      {props.isSuccess && <Info text='Sign up registered! Follow your email.' />}
-      {props.signupExists && <Info text='You have already signed up.' />}
-      {props.isError && <Error text='Something went wrong.' />}
     </div>
   );
 };
