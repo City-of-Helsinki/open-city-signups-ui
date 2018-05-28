@@ -1,5 +1,6 @@
 import React from 'react';
-import {Button, Col, Container, Row} from 'reactstrap';
+import {connect} from 'react-redux';
+import {Button, Col, Container, Row, UncontrolledAlert} from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faArrowRight from '@fortawesome/fontawesome-free-solid/faArrowRight';
 
@@ -10,6 +11,22 @@ import iphone from '../../assets/iphone.svg';
 
 const buttonClickHandler = () => {
   userManager.signinRedirect();
+};
+
+const Info = props => {
+  return (
+    <UncontrolledAlert color='info'>
+      {props.text}
+    </UncontrolledAlert>
+  );
+};
+
+const Error = props => {
+  return (
+    <UncontrolledAlert color='danger'>
+      {props.text}
+    </UncontrolledAlert>
+  );
 };
 
 const LandingPage = props => {
@@ -51,8 +68,18 @@ const LandingPage = props => {
           </Row>
         </Container>
       </section>
+      {props.isSuccess && <Info text='Sign up registered! Follow your email.' />}
+      {props.signupExists && <Info text='You have already signed up.' />}
+      {props.isError && <Error text='Something went wrong.' />}
     </div>
   );
 };
 
-export default LandingPage;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    isError: state.api.isError,
+    isSuccess: state.api.isSuccess,
+    signupExists: state.api.signupExists,
+  };
+};
+export default connect(mapStateToProps)(LandingPage);

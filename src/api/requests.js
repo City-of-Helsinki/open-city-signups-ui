@@ -20,9 +20,10 @@ export const createSignup = (token) => {
   };
   return fetch(url, options)
     .then(response => {
-      if (response.ok) {
-        return true;
+      const {status, ok} = response;
+      if (ok || status === 409) {
+        return ok;
       }
-      throw new Error(response.status);
+      throw new Error(status);
     });
 };
