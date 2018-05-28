@@ -49,7 +49,7 @@ const LandingPage = props => {
             <Col xs='12' md='6'>
               <Texts
                 heading='Yhdellä tunnuksella monta mahdollisuutta'
-                bodytext='Helsingin kaupunki kokeilee ja kehittää koko ajan uusia verkkopalveluita asukkaidensa arjen helpottanmiseksi. Rekisteröitymällä oma.helsinki käyttäjäksi pääset käyttämään uusia palveluita yhdellä helpolla kirjautumisella.'
+                bodytext='Helsingin kaupunki kokeilee ja kehittää koko ajan uusia verkkopalveluita asukkaidensa arjen helpottamiseksi. Parhaillaan kehitämme oma.helsinki-palvelua, jonka kautta pääset käyttämään uusia palveluita yhdellä helpolla kirjautumisella.'
               />
             </Col>
           </Row>
@@ -60,11 +60,17 @@ const LandingPage = props => {
           <Row>
             <Col xs='12' md='6'>
               <Texts
-                heading='Etsimme testaajia'
-                bodytext='Kokeile ja käytä helsingin uusia digitaalisia palveluita yksillä tunnuksilla. Ilmoittaudu mukaan Beta testaukseen.'
+                heading='Etsimme nyt betatestaajia'
+                bodytext='Ilmoittaudu Helsinki-sovelluksen testikäyttäjäksi! Betatesti käynnistyy xx.x. ja jatkuu kesän ajan.'
+              />
+              <Texts
+                bodytext='Helsinki-sovelluksessa testaamme erityisesti oma.helsinki-kirjautumista. Keräämme sovelluksen käytöstä anonyymiä käyttäjätietoa, kuten sovelluksen kaatumisraportit ja tiettyjen toiminnallisuuksien käyttö. Tämän lisäksi toivomme sanallista palautetta sovelluksen sisäisen palautetoiminnallisuuden kautta.'
+              />
+              <Texts
+                bodytext='Betatestaajaksi voi ilmoittautua vain mikäli omistaa Android-älypuhelimen. Sovellus jaellaan Googlen Play Storen kautta. Testaajien tulee olla iältään vähintään 16 vuotta.'
               />
               <Button color='oma' onClick={buttonClickHandler} className={styles.signupButton}>
-                Rekisteröidy Beta-testaukseen
+                Kirjaudu betatestaajaksi
                 <FontAwesomeIcon 
                   icon={faArrowRight}
                   className={styles.arrow}
