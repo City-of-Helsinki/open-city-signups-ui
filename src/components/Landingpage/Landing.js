@@ -36,9 +36,9 @@ const LandingPage = props => {
         <Container>
           <Row>
             <Col>
-              {props.isSuccess && <Info text='Sign up registered! Follow your email.' />}
-              {props.signupExists && <Info text='You have already signed up.' />}
-              {props.isError && <Error text='Something went wrong.' />}
+              {props.isSuccess && <Info text='Kiitos liittymisestäsi betatestaajaksi! Lähetimme lisätietoja sähköpostiisi.' />}
+              {props.signupExists && <Info text='Olet jo aikaisemmin liittynyt betatestaajaksi.' />}
+              {props.isError && <Error text='Jokin meni pieleen.' />}
             </Col>
           </Row>
         </Container>
@@ -61,16 +61,16 @@ const LandingPage = props => {
             <Col xs='12' md='6'>
               <Texts
                 heading='Etsimme nyt betatestaajia'
-                bodytext='Ilmoittaudu Helsinki-sovelluksen testikäyttäjäksi! Betatesti käynnistyy xx.x. ja jatkuu kesän ajan.'
+                bodytext='Ilmoittaudu Helsinki-sovelluksen testikäyttäjäksi! Betatesti käynnistyy kesäkuun lopulla ja jatkuu kesän ajan.'
               />
               <Texts
-                bodytext='Helsinki-sovelluksessa testaamme erityisesti oma.helsinki-kirjautumista. Keräämme sovelluksen käytöstä anonyymiä käyttäjätietoa, kuten sovelluksen kaatumisraportit ja tiettyjen toiminnallisuuksien käyttö. Tämän lisäksi toivomme sanallista palautetta sovelluksen sisäisen palautetoiminnallisuuden kautta.'
+                bodytext='Helsinki-sovelluksessa testaamme erityisesti oma.helsinki-kirjautumista ja siihen liitettyä digikirjastokorttia. Keräämme sovelluksen käytöstä anonyymiä käyttäjätietoa, kuten sovelluksen kaatumisraportit ja tiettyjen toiminnallisuuksien käyttö. Tämän lisäksi toivomme sanallista palautetta sovelluksen sisäisen palautetoiminnallisuuden kautta.'
               />
               <Texts
-                bodytext='Betatestaajaksi voi ilmoittautua vain mikäli omistaa Android-älypuhelimen. Sovellus jaellaan Googlen Play Storen kautta. Testaajien tulee olla iältään vähintään 16 vuotta.'
+                bodytext='Betatestaajaksi voi ilmoittautua mikäli omistaa Android-älypuhelimen. Sovellus jaellaan Googlen Play Storen kautta. Testaajien tulee olla iältään vähintään 16 vuotta.'
               />
               <Button color='oma' onClick={buttonClickHandler} className={styles.signupButton}>
-                Kirjaudu betatestaajaksi
+                Rekisteröidy betatestaajaksi
                 <FontAwesomeIcon 
                   icon={faArrowRight}
                   className={styles.arrow}
