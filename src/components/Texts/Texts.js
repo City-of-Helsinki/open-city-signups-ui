@@ -17,7 +17,7 @@ const Texts = props => {
 };
 
 Texts.propTypes = {
-  heading: PropTypes.string.isRequired,
+  heading: PropTypes.string,
   bodytext: PropTypes.string.isRequired,
 };
 
