@@ -36,9 +36,9 @@ const LandingPage = props => {
         <Container>
           <Row>
             <Col>
-              {props.isSuccess && <Info text='Sign up registered! Follow your email.' />}
-              {props.signupExists && <Info text='You have already signed up.' />}
-              {props.isError && <Error text='Something went wrong.' />}
+              {props.isSuccess && <Info text='Kiitos liittymisestäsi betatestaajaksi! Lähetimme lisätietoja sähköpostiisi.' />}
+              {props.signupExists && <Info text='Olet jo aikaisemmin liittynyt betatestaajaksi.' />}
+              {props.isError && <Error text='Jokin meni pieleen.' />}
             </Col>
           </Row>
         </Container>
@@ -49,7 +49,7 @@ const LandingPage = props => {
             <Col xs='12' md='6'>
               <Texts
                 heading='Yhdellä tunnuksella monta mahdollisuutta'
-                bodytext='Helsingin kaupunki kokeilee ja kehittää koko ajan uusia verkkopalveluita asukkaidensa arjen helpottanmiseksi. Rekisteröitymällä oma.helsinki käyttäjäksi pääset käyttämään uusia palveluita yhdellä helpolla kirjautumisella.'
+                bodytext='Helsingin kaupunki kokeilee ja kehittää koko ajan uusia verkkopalveluita asukkaidensa arjen helpottamiseksi. Parhaillaan kehitämme oma.helsinki-palvelua, jonka kautta pääset käyttämään uusia palveluita yhdellä helpolla kirjautumisella.'
               />
             </Col>
           </Row>
@@ -60,11 +60,17 @@ const LandingPage = props => {
           <Row>
             <Col xs='12' md='6'>
               <Texts
-                heading='Etsimme testaajia'
-                bodytext='Kokeile ja käytä helsingin uusia digitaalisia palveluita yksillä tunnuksilla. Ilmoittaudu mukaan Beta testaukseen.'
+                heading='Etsimme nyt betatestaajia'
+                bodytext='Ilmoittaudu Helsinki-sovelluksen testikäyttäjäksi! Betatesti käynnistyy kesäkuun lopulla ja jatkuu kesän ajan.'
+              />
+              <Texts
+                bodytext='Helsinki-sovelluksessa testaamme erityisesti oma.helsinki-kirjautumista ja siihen liitettyä digikirjastokorttia. Keräämme sovelluksen käytöstä anonyymiä käyttäjätietoa, kuten sovelluksen kaatumisraportit ja tiettyjen toiminnallisuuksien käyttö. Tämän lisäksi toivomme sanallista palautetta sovelluksen sisäisen palautetoiminnallisuuden kautta.'
+              />
+              <Texts
+                bodytext='Betatestaajaksi voi ilmoittautua mikäli omistaa Android-älypuhelimen. Sovellus jaellaan Googlen Play Storen kautta. Testaajien tulee olla iältään vähintään 16 vuotta.'
               />
               <Button color='oma' onClick={buttonClickHandler} className={styles.signupButton}>
-                Rekisteröidy Beta-testaukseen
+                Rekisteröidy betatestaajaksi
                 <FontAwesomeIcon 
                   icon={faArrowRight}
                   className={styles.arrow}
