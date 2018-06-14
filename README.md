@@ -4,6 +4,9 @@ City of Helsinki User Signup Interface
 
 ```This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).```
 
+## Configuration
+
+Copy the contents of `.env.example` to `.env` and modify to taste.
 
 ## Available Scripts
 
