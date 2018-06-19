@@ -36,8 +36,8 @@ const LandingPage = props => {
         <Container>
           <Row>
             <Col>
-              {props.isSuccess && <Info text='Kiitos liittymisestäsi betatestaajaksi! Lähetimme lisätietoja sähköpostiisi.' />}
-              {props.signupExists && <Info text='Olet jo aikaisemmin liittynyt betatestaajaksi.' />}
+              {props.isSuccess && <Info text='Kiitos liittymisestäsi testaajaksi! Lähetimme lisätietoja sähköpostiisi.' />}
+              {props.signupExists && <Info text='Olet jo aikaisemmin liittynyt testaajaksi.' />}
               {props.isError && <Error text='Jokin meni pieleen.' />}
             </Col>
           </Row>
@@ -60,17 +60,17 @@ const LandingPage = props => {
           <Row>
             <Col xs='12' md='6'>
               <Texts
-                heading='Etsimme nyt betatestaajia'
-                bodytext='Ilmoittaudu Helsinki-sovelluksen testikäyttäjäksi! Betatesti käynnistyy kesäkuun lopulla ja jatkuu kesän ajan.'
+                heading='Etsimme nyt testikäyttäjiä'
+                bodytext='Ilmoittaudu Helsinki-sovelluksen testaajaksi! Käyttäjätesti käynnistyy kesäkuun lopulla ja jatkuu kesän ajan.'
               />
               <Texts
                 bodytext='Helsinki-sovelluksessa testaamme erityisesti oma.helsinki-kirjautumista ja siihen liitettyä digikirjastokorttia. Keräämme sovelluksen käytöstä anonyymiä käyttäjätietoa, kuten sovelluksen kaatumisraportit ja tiettyjen toiminnallisuuksien käyttö. Tämän lisäksi toivomme sanallista palautetta sovelluksen sisäisen palautetoiminnallisuuden kautta.'
               />
               <Texts
-                bodytext='Betatestaajaksi voi ilmoittautua mikäli omistaa Android-älypuhelimen. Sovellus jaellaan Googlen Play Storen kautta. Testaajien tulee olla iältään vähintään 16 vuotta.'
+                bodytext='Testaajaksi voi ilmoittautua mikäli omistaa Android-älypuhelimen. Sovellus jaellaan Googlen Play Storen kautta. Testaajien tulee olla iältään vähintään 16 vuotta.'
               />
               <Button color='oma' onClick={buttonClickHandler} className={styles.signupButton}>
-                Rekisteröidy betatestaajaksi
+                Rekisteröidy testaajaksi
                 <FontAwesomeIcon 
                   icon={faArrowRight}
                   className={styles.arrow}

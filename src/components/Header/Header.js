@@ -11,7 +11,7 @@ const Header = () => {
         <Row>
           <Col>
             <img src={HelLogo} alt='Helsinki Logo'/>
-            <span className={styles.title}>Oma.Helsinki</span>
+            <span className={styles.title}>oma.helsinki</span>
           </Col>
         </Row>
       </Container>
