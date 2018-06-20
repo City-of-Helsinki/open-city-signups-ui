@@ -1,21 +1,26 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {CallbackComponent} from 'redux-oidc';
 import userManager from '../../oidc/userManager';
+import {apiError} from '../../api/redux';
 
 class CallbackPage extends React.Component {
-  callback = () => {
-    this.props.history.push('/')
+  successCallback = () => {
+    this.props.history.push('/');
+  };
+
+  errorCallback = () => {
+    this.props.apiError();
+    this.props.history.push('/');
   };
 
   render() {
     return (
-      <CallbackComponent userManager={userManager} successCallback={this.callback} errorCallback={this.callback}>
-        <div>
-          Redirecting...
-        </div>
+      <CallbackComponent userManager={userManager} successCallback={this.successCallback} errorCallback={this.errorCallback}>
+        <span></span>
       </CallbackComponent>
     );
   }
 }
 
-export default CallbackPage;
+export default connect(null, {apiError})(CallbackPage);
