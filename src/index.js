@@ -12,6 +12,7 @@ import CallbackPage from './components/CallbackPage/CallbackPage';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './redux/store';
 import userManager from './oidc/userManager';
+import {nodeEnv, omaHelsinkiBaseName} from './env'
 
 const store = configureStore();
 
@@ -19,7 +20,7 @@ ReactDOM.render(
   <Provider store={store}>
     <OidcProvider store={store} userManager={userManager}>
       <App>
-        <BrowserRouter>
+        <BrowserRouter basename={nodeEnv === 'development' ? '' : omaHelsinkiBaseName}>
           <Switch>
             <Route exact path='/' component={LandingPage}/>
             <Route exact path='/404' component={NotFound}/>
