@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {CallbackComponent} from 'redux-oidc';
 import userManager from '../../oidc/userManager';
 import {apiError} from '../../api/redux';
+import styles from './callbackpage.scss';
 
 class CallbackPage extends React.Component {
   successCallback = () => {
@@ -17,7 +18,9 @@ class CallbackPage extends React.Component {
   render() {
     return (
       <CallbackComponent userManager={userManager} successCallback={this.successCallback} errorCallback={this.errorCallback}>
-        <span></span>
+        <div className={styles.filler}>
+          <span>Ladataan...</span>
+        </div>
       </CallbackComponent>
     );
   }
