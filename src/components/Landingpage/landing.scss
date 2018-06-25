@@ -27,13 +27,15 @@
 
 .phoneWrapper {
   transform: translateY(-100%);
-  @media screen and (max-width: 768px) {
+  text-align: center;
+  @media screen and (max-width: 767px) {
     display: none;
   }
 }
 
 .phone {
   display: inline-block;
+  max-height: 600px;
   max-width: 100%;
 }
 

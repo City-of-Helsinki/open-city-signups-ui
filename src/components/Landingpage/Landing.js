@@ -7,7 +7,7 @@ import faArrowRight from '@fortawesome/fontawesome-free-solid/faArrowRight';
 import userManager from '../../oidc/userManager';
 import Texts from '../Texts/Texts';
 import styles from './landing.scss';
-import iphone from '../../assets/iphone.svg';
+import androidPhone from '../../assets/android.svg';
 
 const buttonClickHandler = () => {
   userManager.signinRedirect();
@@ -79,7 +79,7 @@ const LandingPage = props => {
             </Col>
             <Col md='6'>
               <div className={styles.phoneWrapper}>
-                <img src={iphone} alt='' className={styles.phone} />
+                <img src={androidPhone} alt='' className={styles.phone} />
               </div>
             </Col>
           </Row>
